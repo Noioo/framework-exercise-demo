@@ -4,7 +4,7 @@ package yag.di;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.testng.annotations.Test;
-import yag.di.java.config.JavaConfig;
+import yag.di.java.injection.JavaConfig;
 import yag.di.java.injection.BeanUser;
 
 @Test

@@ -1,9 +1,8 @@
-package yag.di.java.config;
+package yag.di.java.injection;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import yag.di.java.HelloWorld;
-import yag.di.java.injection.BeanUser;
 
 @Configuration
 public class JavaConfig {

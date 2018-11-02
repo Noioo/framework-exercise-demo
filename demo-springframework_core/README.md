@@ -51,12 +51,11 @@ Bean类
 
 配置文件: 
 * 注解扫描: `di/java-config.xml`
-* JavaConfig: `config.JavaConfig`
 
 Bean类: 
 * `HelloWorld` 
 
-依赖注入: 
+依赖注入(`injection`)
 * Setter: `injection.BeanUser`
 
 
