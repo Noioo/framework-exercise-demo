@@ -1,15 +1,16 @@
-package yag.di.xml.annotation_qualifier;
+package yag.ioc.xml.annotation_qualifier;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import yag.di.xml.PojoBean;
+import yag.ioc.xml.PojoBean;
 
-public class ConstructionQualifierBeanUser {
+public class SetterQualifierBeanUser {
 
     private PojoBean pojoBean;
 
     @Autowired
-    public ConstructionQualifierBeanUser(@Qualifier(value = "want") PojoBean pojoBean){
+    @Qualifier(value = "want")
+    public void setPojoBean(PojoBean pojoBean) {
         this.pojoBean = pojoBean;
     }
 

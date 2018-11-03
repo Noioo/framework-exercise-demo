@@ -1,6 +1,6 @@
-package yag.di.xml.byname_bytype;
+package yag.ioc.xml.byname_bytype;
 
-import yag.di.xml.MethodBean;
+import yag.ioc.xml.MethodBean;
 
 public class ByTypeBeanUser {
 

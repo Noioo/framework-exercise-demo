@@ -1,11 +1,11 @@
-package yag.di;
+package yag.ioc;
 
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.testng.annotations.Test;
-import yag.di.java.injection.JavaConfig;
-import yag.di.java.injection.BeanUser;
+import yag.ioc.java.injection.JavaConfig;
+import yag.ioc.java.injection.BeanUser;
 
 @Test
 public class JavaConfigTest {

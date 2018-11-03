@@ -1,8 +1,8 @@
-package yag.di.xml.annotation_autowired;
+package yag.ioc.xml.annotation_autowired;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import yag.di.xml.MethodBean;
+import yag.ioc.xml.MethodBean;
 
 public class AttributeAutowiredBeanUser {
 

@@ -1,7 +1,7 @@
-package yag.di.xml.injection_bean_user;
+package yag.ioc.xml.injection_bean_user;
 
 
-import yag.di.xml.MethodBean;
+import yag.ioc.xml.MethodBean;
 
 // 利用Setter进行注入
 public class SetterBeanUser {

@@ -1,6 +1,6 @@
-package yag.di.java;
+package yag.ioc.java;
 
-public class HelloWorld {
+public class HelloWorldBean {
 
     public void sayHelloWorld(){
         System.out.println("Hello World");

@@ -1,4 +1,4 @@
-package yag.di.xml;
+package yag.ioc.xml;
 
 public class PojoBean<T> {
 

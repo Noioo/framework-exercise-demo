@@ -14,50 +14,33 @@
 > testNG-`6.14.3`
 
 ## 说明
+* `aop` - Spring-AOP
+* `ioc` - 依赖注入
+* `resource` - Spring所提供的一种访问底层资源的方式
+* `validation` - 数据验证
+* `data_buffers` - Spring所提供的一组抽象来处理各种字节缓冲API(Java NIO)
+* `spel` - Spring Expression Language
+
+---
 
 ### Bean与依赖注入
 
-#### 基于XML配置的一系列实现(`yag.di.xml`)
-> `BeanUser`就是依赖Bean类的类. 
+#### 基于XML配置的一系列实现(`ioc.xml`)
 
-配置文件: 
-* `di/xml-config.xml`
+配置文件: `ioc/xml-config.xml`
 
-Bean类
-* `MethodBean.java` - 一个只有一个方法的Bean类, 许多BeanUser都将调用这个方法.
-* `PojoBean.java` - POJO模式的Bean类, 用于一些传值实现. 
+以`Bean`结尾: Bean类
 
-依赖注入(`injection_bean_user`)
-* `ConstructionBeanUser.java` - 构造注入
-* `SetterBeanUser.java` - 设值注入
+以`BeanUser`结尾: Bean的使用者类, 均依赖`Bean`. 
 
-自动装配(`byname_bytype`)
-* `ByNameBeanUser.java` - byName
-* `ByTypeBeanUser.java` - byType 
+测试: `yag.ioc.XmlConfigTest`
 
-使用`@Autowired`(`annotation_autowired`)
-* `AttributeAutowiredBeanUser.java` - 在属性上
-* `ConstructionAutowiredBeanUser.java` - 在构造函数上
-* `SetterAutowiredBeanUser.java` - 在Setter方法上
+#### 基于Java(注解)配置的一系列实现(`ioc.java`)
 
-使用`@Qualifier`(`annotation_qualifier`)
-* `ConstructionQualifierBeanUser.java` - 在构造函数上
-* `SetterQualifierBeanUser.java` - Setter方法上
+配置注解扫描: `ioc/java-config.xml`  
 
-> `test/java`测试: `yag.di.XmlConfigTest`
+以`Bean`结尾: Bean类  
 
-
-#### 基于Java(注解)配置的一系列实现(`yag.di.java`)
-
-配置文件: 
-* 注解扫描: `di/java-config.xml`
-
-Bean类: 
-* `HelloWorld` 
-
-依赖注入(`injection`)
-* Setter: `injection.BeanUser`
-
-
-
-> `test/java`测试: `yag.di.JavaConfigTest`
+以`BeanUser`结尾: Bean的使用者类, 均依赖`Bean`.  
+ 
+测试: `yag.ioc.JavaConfigTest`

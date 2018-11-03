@@ -1,18 +1,18 @@
-package yag.di;
+package yag.ioc;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-import yag.di.xml.annotation_autowired.AttributeAutowiredBeanUser;
-import yag.di.xml.annotation_autowired.ConstructionAutowiredBeanUser;
-import yag.di.xml.annotation_autowired.SetterAutowiredBeanUser;
-import yag.di.xml.annotation_qualifier.ConstructionQualifierBeanUser;
-import yag.di.xml.annotation_qualifier.SetterQualifierBeanUser;
-import yag.di.xml.byname_bytype.ByNameBeanUser;
-import yag.di.xml.byname_bytype.ByTypeBeanUser;
-import yag.di.xml.injection_bean_user.ConstructionBeanUser;
-import yag.di.xml.injection_bean_user.SetterBeanUser;
+import yag.ioc.xml.annotation_autowired.AttributeAutowiredBeanUser;
+import yag.ioc.xml.annotation_autowired.ConstructionAutowiredBeanUser;
+import yag.ioc.xml.annotation_autowired.SetterAutowiredBeanUser;
+import yag.ioc.xml.annotation_qualifier.ConstructionQualifierBeanUser;
+import yag.ioc.xml.annotation_qualifier.SetterQualifierBeanUser;
+import yag.ioc.xml.byname_bytype.ByNameBeanUser;
+import yag.ioc.xml.byname_bytype.ByTypeBeanUser;
+import yag.ioc.xml.injection_bean_user.ConstructionBeanUser;
+import yag.ioc.xml.injection_bean_user.SetterBeanUser;
 
 @Test
 public class XmlConfigTest {

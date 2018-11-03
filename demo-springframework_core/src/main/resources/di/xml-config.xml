@@ -7,10 +7,10 @@
     <context:annotation-config/>
 
     <!--Method Bean-->
-    <bean id="methodBean" class="yag.di.xml.MethodBean"/>
+    <bean id="methodBean" class="yag.ioc.xml.MethodBean"/>
 
     <!--POJO Bean(固定值)-->
-    <bean id="want" class="yag.di.xml.PojoBean">
+    <bean id="want" class="yag.ioc.xml.PojoBean">
         <property name="theStringValue" value="固定的String值"/>
         <!-- 可用ref属性来引用另一个Bean作为注入值 -->
     </bean>
@@ -19,21 +19,21 @@
     <!--依赖注入-->
     <!--pkg: injection_bean_user-->
         <!--设值注入-->
-        <bean id="setterBeanUser" class="yag.di.xml.injection_bean_user.SetterBeanUser">
+        <bean id="setterBeanUser" class="yag.ioc.xml.injection_bean_user.SetterBeanUser">
             <property name="methodBean" ref="methodBean"/>
         </bean>
 
         <!--构造注入(同时也是自动装配的一种)-->
-        <bean id="constructionBeanUser" class="yag.di.xml.injection_bean_user.ConstructionBeanUser">
+        <bean id="constructionBeanUser" class="yag.ioc.xml.injection_bean_user.ConstructionBeanUser">
             <constructor-arg ref="methodBean"/>
         </bean>
 
     <!--自动装配-->
     <!--pkg: byname_bytype-->
         <!--byName装配: -->
-        <bean id="byNameBeanUser" class="yag.di.xml.byname_bytype.ByNameBeanUser" autowire="byName"/>
+        <bean id="byNameBeanUser" class="yag.ioc.xml.byname_bytype.ByNameBeanUser" autowire="byName"/>
         <!--byType装配: -->
-        <bean id="byTypeBeanUser" class="yag.di.xml.byname_bytype.ByTypeBeanUser" autowire="byType"/>
+        <bean id="byTypeBeanUser" class="yag.ioc.xml.byname_bytype.ByTypeBeanUser" autowire="byType"/>
 
 
 
@@ -41,23 +41,23 @@
     <!--pkg: annotation_autowired-->
         <!--在属性上-->
         <bean id="attributeAutowiredBeanUser"
-              class="yag.di.xml.annotation_autowired.AttributeAutowiredBeanUser"/>
+              class="yag.ioc.xml.annotation_autowired.AttributeAutowiredBeanUser"/>
         <!--在构造函数上-->
         <bean id="constructionAutowiredBeanUser"
-              class="yag.di.xml.annotation_autowired.ConstructionAutowiredBeanUser"/>
+              class="yag.ioc.xml.annotation_autowired.ConstructionAutowiredBeanUser"/>
         <!--Setter方法上-->
         <bean id="setterAutowiredBeanUser"
-              class="yag.di.xml.annotation_autowired.SetterAutowiredBeanUser"/>
+              class="yag.ioc.xml.annotation_autowired.SetterAutowiredBeanUser"/>
 
     <!--@Qualifier-->
     <!--pkg: annotation_qualifier-->
         <!--一个用于混淆, 不需要的Bean-->
-        <bean class="yag.di.xml.PojoBean">
+        <bean class="yag.ioc.xml.PojoBean">
             <property name="theStringValue" value="不需要的Bean"/>
         </bean>
         <!--构造函数-->
-        <bean id="constructionQualifierBeanUser" class="yag.di.xml.annotation_qualifier.ConstructionQualifierBeanUser"/>
+        <bean id="constructionQualifierBeanUser" class="yag.ioc.xml.annotation_qualifier.ConstructionQualifierBeanUser"/>
         <!--Setter-->
-        <bean id="setterQualifierBeanUser" class="yag.di.xml.annotation_qualifier.SetterQualifierBeanUser"/>
+        <bean id="setterQualifierBeanUser" class="yag.ioc.xml.annotation_qualifier.SetterQualifierBeanUser"/>
 
 </beans>
